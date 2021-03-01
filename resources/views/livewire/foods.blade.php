@@ -37,7 +37,9 @@
 					// echo '<button style="font-size: .8rem;" @click="showAdjustFoodQuantity = !showAdjustFoodQuantity" wire:click="setFoodNameToAdjust(\'' . $food['name'] . '\')" class="text-lg btn btn-primary">Adjust Quantity</button>';
 					
 					// the @click version does not
-					// steps to reproduce - add multiple foods, of unique names. (you can use name 1, quantity 1, and name: 2, quantity: 2)
+					// steps to reproduce - add multiple foods, of unique names.
+					// delete the first food
+					// example: use name: 1, quantity: 1, and name: 2, quantity: 2
 					// then delete the first food, the first item will not delete, but rather be filled with name 2 quantity 2 (so there are two that say name 2 quantity 2)
 					echo '<button style="font-size: .8rem;" @click="showAdjustFoodQuantity = !showAdjustFoodQuantity, adjustFoodQuantityName=\'' . $food['name'] . '\'" class="text-lg btn btn-primary">Adjust Quantity</button>';
 				}
